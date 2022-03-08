@@ -40,7 +40,7 @@ public class WebrtcMessage {
     private String roomId;
     private String message;
     private String roomPw;
-    private String token;
+    private String token = "true";
 
     public WebrtcMessage() {
 

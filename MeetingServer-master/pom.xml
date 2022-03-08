@@ -15,6 +15,7 @@
     <description>Meeting Server</description>
 
     <properties>
+        <skipTests>true</skipTests>
         <java.version>11</java.version>
     </properties>
 
@@ -121,6 +122,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>cn.nicenan.meeting.MeetingApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

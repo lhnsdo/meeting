@@ -21,6 +21,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import javax.annotation.Resource;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -38,10 +39,7 @@ import java.io.IOException;
 @Component
 public class JwtTokenFilter extends OncePerRequestFilter {
     @Qualifier("jwtUserDetailsServiceImpl")
-    @Autowired
-    private UserDetailsService userDetailsService;
-
-    @Autowired
+    @Resource
     private JwtTokenUtil jwtTokenUtil;
 
     @Override

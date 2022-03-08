@@ -34,6 +34,8 @@ import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+import javax.annotation.Resource;
+
 /**
  * 〈一句话功能简述〉<br>
  * 〈这个就是Spring Security 的配置类〉
@@ -52,9 +54,9 @@ import org.springframework.web.filter.CorsFilter;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurity extends WebSecurityConfigurerAdapter {
 
-    @Autowired
+    @Resource
     private EntryPointUnauthorizedHandler entryPointUnauthorizedHandler;
-    @Autowired
+    @Resource
     private RestAccessDeniedHandler restAccessDeniedHandler;
 
 
